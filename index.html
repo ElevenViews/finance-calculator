@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form class="calculator" id="finance-calculator" aria-label="Finance Calculator">
+    <div class="inputs">
+      <label for="loan-amount">Loan Amount (£):</label>
+      <div class="loan-amount-container">
+        <input
+          type="number"
+          id="loan-amount"
+          name="loanAmount"
+          placeholder="e.g., 7500"
+          min="0"
+          max="20000"
+          required
+          aria-label="Enter loan amount"
+        />
+      </div>
+      <p class="warning" id="loan-warning" style="display: none;">Loan amount cannot exceed £20,000.00.</p>
+
+      <label for="repayment-term">Repayment Term (years):</label>
+      <select id="repayment-term" name="repaymentTerm" aria-label="Select repayment term">
+        <option value="12">1 year</option>
+        <option value="24">2 years</option>
+        <option value="36">3 years</option>
+        <option value="48">4 years</option>
+        <option value="60" selected>5 years</option>
+      </select>
+
+      <label for="credit-rating">Credit Rating:</label>
+      <select id="credit-rating" name="creditRating" aria-label="Select credit rating">
+        <option value="excellent" selected>Excellent</option>
+        <option value="good">Good</option>
+        <option value="poor">Poor</option>
+        <option value="bad">Bad</option>
+      </select>
+    </div>
+
+    <div class="summary">
+      <h2>Your Summary</h2>
+      <p>Loan Amount: £<span id="summary-loan-amount">0.00</span></p>
+      <p>Repayment Term: <span id="summary-repayment-term">0</span> months</p>
+      <p>Monthly Repayment: £<span id="summary-monthly-repayment">0.00</span></p>
+      <p>Typical Rate: <span id="summary-typical-rate">0.00</span>% APR</p>
+      <p class="illustration-caveat">*For illustration purposes only.</p>
+      <p>Total Payable: £<span id="summary-total-payable">0.00</span></p>
+      <button id="send-calculations" type="submit" aria-label="Send calculations">Send my Calculations</button>
+      <p class="credit-caveat">*No impact on your credit score.</p>
+    </div>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
