@@ -1,9 +1,8 @@
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fff;
+    background-color: #fff; /* Set to white */
     margin: 0;
-    padding: 10px 0; /* Reduce vertical padding */
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
