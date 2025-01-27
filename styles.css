@@ -1,51 +1,52 @@
 /* General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #f4f4f4;
     margin: 0;
-    padding: 5px;
+    padding: 10px 0; /* Reduce vertical padding */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-  }
-  
-  .calculator {
+}
+
+.calculator {
     max-width: 800px;
     width: 100%;
     background: #fff;
-    padding: 30px;
+    padding: 20px; /* Reduce padding */
     border-radius: 12px;
-    border: 2px solid #26617f;
+    border: 1px solid #ccc; /* Subtle border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-wrap: wrap;
     gap: 0;
-  }
-  
-  .inputs {
+    margin: 0 auto; /* Center align */
+}
+
+.inputs {
     flex: 1;
     min-width: 250px;
     max-width: 400px;
-    padding: 20px 10px;
-  }
-  
-  .inputs label {
+    padding: 10px; /* Reduced padding for consistency */
+}
+
+.inputs label {
     display: block;
     margin: 15px 0 10px;
     color: #26617f;
     font-weight: bold;
-  }
-  
-  .inputs .loan-amount-container {
+}
+
+.inputs .loan-amount-container {
     display: flex;
     align-items: center;
     width: 100%;
     max-width: 300px;
     position: relative;
-  }
-  
-  .inputs .loan-amount-container::before {
+}
+
+.inputs .loan-amount-container::before {
     content: "£";
     position: absolute;
     left: 12px;
@@ -56,9 +57,9 @@ body {
     top: 43%;
     transform: translateY(-50%);
     pointer-events: none;
-  }
-  
-  .inputs #loan-amount {
+}
+
+.inputs #loan-amount {
     flex: 1;
     padding: 10px 10px 10px 40px;
     margin-bottom: 10px;
@@ -67,27 +68,27 @@ body {
     font-size: 16px;
     box-sizing: border-box;
     line-height: 1.5;
-  }
-  
-  .inputs input[type="number"] {
+}
+
+.inputs input[type="number"] {
     -moz-appearance: textfield;
     appearance: textfield;
-  }
-  
-  .inputs input[type="number"]::-webkit-outer-spin-button,
-  .inputs input[type="number"]::-webkit-inner-spin-button {
+}
+
+.inputs input[type="number"]::-webkit-outer-spin-button,
+.inputs input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-  }
-  
-  .warning {
+}
+
+.warning {
     color: #ff0000;
     font-size: 0.85em;
     margin: 5px 0;
     display: none;
-  }
-  
-  .inputs select {
+}
+
+.inputs select {
     width: 100%;
     max-width: 300px;
     padding: 10px;
@@ -99,69 +100,91 @@ body {
     background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2326617f'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") no-repeat right 10px center;
     background-size: 20px;
     padding-right: 40px;
-  }
-  
-  .inputs input:focus,
-  .inputs select:focus {
+}
+
+.inputs input:focus,
+.inputs select:focus {
     border-color: #01b0da;
     outline: none;
-  }
-  
-  .summary {
+}
+
+.summary {
     flex: 1;
     min-width: 250px;
-    padding: 20px;
+    padding: 10px; /* Ensure padding matches inputs */
     background-color: rgba(38, 97, 127, 0.1);
     border-radius: 0 12px 12px 0;
-  }
-  
-  .summary h2 {
+}
+
+.summary h2 {
     text-align: center;
     color: #26617f;
     margin-bottom: 15px;
-  }
-  
-  .summary p {
+}
+
+.summary p {
     margin: 10px 0;
     color: #000;
-  }
-  
-  .summary p span {
+}
+
+.summary p span {
     font-weight: bold;
     color: #14bab5;
-  }
-  
+}
+
 /* Left-align "For illustration purposes only" */
 .summary .illustration-caveat {
     font-size: 0.85em;
     color: #888;
     text-align: left;
     margin: 5px 0;
-  }
-  
-  /* Center-align "No impact on your credit score" */
-  .summary .credit-caveat {
+}
+
+/* Center-align "No impact on your credit score" */
+.summary .credit-caveat {
     font-size: 0.85em;
     color: #888;
     text-align: center;
     margin: 10px 0;
-  }
-  
-  button {
+}
+
+/* Button Styling */
+button {
     width: 80%;
     padding: 12px;
-    background-color: #01b0da;
+    background-color: #26617f; /* Match branding */
     color: #fff;
     border: none;
     border-radius: 25px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 0 auto;
+    margin: 20px auto; /* Center and add spacing */
     display: block;
-  }
-  
-  button:hover {
-    background-color: #0199c2;
-  }
-  
+}
+
+button:hover {
+    background-color: #014f6b; /* Darker hover effect */
+}
+
+/* Representative Example */
+.representative-example {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calculator {
+        flex-direction: column; /* Stack sections vertically */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    .summary {
+        margin-top: 20px; /* Add spacing between sections */
+    }
+    button {
+        width: 100%; /* Make button full width */
+    }
+}
