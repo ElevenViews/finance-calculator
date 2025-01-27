@@ -1,12 +1,17 @@
 /* General Styling */
 body {
-    background-color: #fff; /* Set to white */
+    font-family: Arial, sans-serif !important; /* Enforce sans-serif globally */
+    background-color: #fff; /* Ensure white background */
     margin: 0;
-    padding: 10px 0;
+    padding: 10px 0; /* Reduce vertical padding */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+}
+
+input, select, button, label, p, h2 {
+    font-family: inherit; /* Inherit font-family from body */
 }
 
 .calculator {
